@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 import UsersRoutes from "./src/routes/user.routes"
 import PetsRoutes from "./src/routes/pets.routes"
+import StepsRoutes from "./src/routes/steps.routes"
 const app = express();
 
 
@@ -19,5 +20,6 @@ app.get("/", (req, res) => {
 
 app.use("/api/users", UsersRoutes);
 app.use("/api/pets", PetsRoutes);
+app.use("/api/steps", StepsRoutes)
 
 export default app;
